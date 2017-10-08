@@ -15,7 +15,7 @@ class Product {
       this.image = "images/default.png",
       this.network = false,
       this.description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae volutpat purus. Mauris feugiat, ante sit amet hendrerit imperdiet, lorem ex porttitor ex, et varius metus erat quis felis. Pellentesque eu urna pulvinar, consectetur leo eget, interdum enim. Proin auctor lectus nec metus maximus, at volutpat purus dignissim.",
-      this.inCart = true,
+      this.inCart = false,
       });
   changeCart() {
     this.inCart = !this.inCart;
@@ -76,7 +76,7 @@ class ProductView extends StatelessWidget {
                 new Padding(
                     padding: new EdgeInsets.only(top: 3.0, bottom: 4.0),
                     child: new Text(product.title,
-                        style: new TextStyle(fontWeight: FontWeight.bold))),
+                        )),
                 new Row(
                   children: <Widget>[
                     new Icon(Icons.attach_money,

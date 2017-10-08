@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 import 'package:url_launcher/url_launcher.dart';
 
-//TODO I think those __Build pages are a waste?
 //main method creates and runs the app
 void main() {
   runApp(new MyApp());
@@ -21,7 +20,6 @@ class MyApp extends StatelessWidget {
       ImagesPage.routeName: (BuildContext context) => new ImagesPage(),
     };
     //the general info that the app needs
-    //TODO: Understand themes better
     return new MaterialApp(
       title: 'Flutter Demo',
       theme: new ThemeData(

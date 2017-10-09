@@ -1,0 +1,86 @@
+This text file is organized by separate projects found in the repository. Format from to top to bottom of each project: title of project, description, list of features that are showcased.
+If any file/project seems to open up buggy, try running "flutter upgrade".
+
+bot_navbar
+This project aims to showcase a bottom_navigation_bar (tabs on the bottom) with color and pop transitions in the navigation bar and fade transitions among the pages.
+-bottom_navigation_bar
+-tabs using text, icons, and both (the weird spacing is caused by not being uniform)
+-pages feature columns and rows
+
+top_navbar
+Very similar to bot_navbar, this project aims to showcase a top_navigation_bar with sliding transitions that don't change color in the navigation bar and sliding transitions among the pages.
+-bottom_navigation_bar
+-tabs using text, icons, and both (the weird spacing is caused by not being uniform)
+-pages feature columns and rows and stacks (ehh)
+
+drawer_and_routing
+This is one of the more comprehensive projects in the repository. This one showcases a navigation drawer. Each page has it's own feature. 
+Images page is a grid of images with title and subtitles that can be expanded and "favorited". 
+Favorited images will appear in the "favorites" page in a list. They can be removed from your favorites with the button on the right. When no favorites are selected a message appears.
+Cake page showcases user interaction by growing the cake when tapped and changing the shade of the cake. TODO: Change color instead of shade.
+Check out the web page showcases LAUNCHING BROWSERS.
+There is also a button on the bottom right that returns to the home page (which is the default flutter, button tapping page).
+-image tiles
+-favorites
+-list
+-user interaction (size and shade)
+-browser launcher
+-home button
+-drawer navigation
+
+generic_drawer_and_routing
+(Upon the request of Wes) this project aims to demonstrate pretty much the same functionality as drawer_and_routing in a more generic ("page 1, page 2, etc.") form.
+It lacks some of the functionality found in drawer_and_routing (for example: doesn't include favorited images in the favorites page)
+-image tiles
+-user interaction (size and shade)
+-browser launcher
+-home button
+-drawer navigation
+
+flutter_shopping
+This is another more comprehensive project. It showcases a generic app marketplace where the user sees a grid of items. The items can be visited to see a description, cost, and where the user can add the item to the cart.
+The cart page shows the list of items that have been added to the cart. Items can be removed. At the bottom is a sum for all the items in the cart in the form of a checkout button. The button currently displays a snackbar instead of checking out.
+TODO: Make it look a lot better
+-grid
+-list
+-adding items to a cart
+-object orientation (products)
+-stacks for items
+-adding prices
+-icon button
+-popups (creating pages for items)
+-snackbar popups
+
+generic_list
+This aims to showcase lists (when lists are mentioned it most likely means rows) of items (hard coded into the app) that can be toggled (strikethrough and black or normal) and can be long-pressed for a dialog popup to appear.
+TODO: Could be more comprehensive, right now it is very basic.
+-lists/rows
+-toggle items
+-long press dialog
+-snackbar popups
+-basic circle avatars
+
+layouts
+Showcases how flutter can be used to make GOOD looking layouts. Lacks actual functionality (except for favorite star that adds and subtracts). This is a flutter codelab.
+-How to make a layout look good
+
+new_firebase_test
+Follows flutter codelab to use firebase as a database for a chatroom app. Since firebase updated it is broken. Currently looking for alternatives.
+-firebase?
+
+parent_managing_child
+One of the most important parts of flutter is the difference between stateful and stateless widgets and managing state in general. This is an example of how a "parent" widget can manage the state of a stateless "child"
+-state management
+
+small_widgets_and_theme
+This project showcases various small widgets (different types of buttons and sliders) and showcases them working with a theme.
+-Theme
+-flatbutton (toggles)
+-dropdown
+-raised and flatbuttons (select) (^ flashes because they change randomly on update(between flat and raised))
+-random selection
+-switch and togglebox (only works when "red" is selected) (toggles the dark vs light theme)
+-slider (changes the shade of red (only on "red"))
+
+vivacity
+Putting together the Vivacity App

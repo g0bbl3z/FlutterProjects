@@ -46,18 +46,18 @@ class NavigationIconView {
     _animation = new CurvedAnimation(parent: controller, curve: const Interval(0.5, 1.0, curve: Curves.easeInOut));
   }
   //TODO: Investigate different animations and how to adjust them
-  FadeTransition transition(BuildContext context){
-    return new FadeTransition(
-      opacity: _animation,
-      child: new SlideTransition(
-        position: new FractionalOffsetTween(
-          begin: const FractionalOffset(0.02, 0.02),
-          end: FractionalOffset.topLeft,
-        ).animate(_animation),
-        child: _page,
-      ),
-    );
-  }
+//  FadeTransition transition(BuildContext context){
+//    return new FadeTransition(
+//      opacity: _animation,
+//      child: new SlideTransition(
+//        position: new FractionalOffsetTween(
+//          begin: const FractionalOffset(0.02, 0.02),
+//          end: FractionalOffset.topLeft,
+//        ).animate(_animation),
+//        child: _page,
+//      ),
+//    );
+//  }
 }
 
 //the class that is put into the "home" parameter at the app level. Is stateful so needs to create state
@@ -112,9 +112,9 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin{
   Widget _buildTransitionStack() {
     final List<FadeTransition> transitions = <FadeTransition>[];
 
-    for(NavigationIconView view in _navigationViews){
-      transitions.add(view.transition(context));
-    }
+//    for(NavigationIconView view in _navigationViews){
+//      transitions.add(view.transition(context));
+//    }
 
     return new Stack(
       children: transitions,

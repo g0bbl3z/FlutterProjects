@@ -38,8 +38,10 @@ class Third extends StatelessWidget {
         ),
         new Positioned(
           child: new Container(
-            child: new Text(
-                "Page Three"
+            child: new RaisedButton(onPressed: () => print("tst"),
+              child: new Text(
+                  "Page Three"
+              ),
             ),
             color: Colors.yellow,
             padding: new EdgeInsets.all(40.0),

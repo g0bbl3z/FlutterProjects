@@ -25,7 +25,7 @@ class MyTabsState extends State<MyApp> with SingleTickerProviderStateMixin {
   //this variable is very important. it is used to handle changing between tabs
   TabController tabController;
 
-  //Not exactly sure what this is for but it is important
+  //initializer
   @override
   void initState() {
     super.initState();

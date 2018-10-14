@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'squarePage.dart';
-
+import 'trianglePage.dart';
+import 'circlePage.dart';
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
   var routes = <String, WidgetBuilder>{
     squarePage.routeName: (BuildContext context) => new squarePage(),
-//    trianglePage.routeName: (BuildContext context) => new trianglePage(),
-//    circlePage.routeName: (BuildContext context) => new circlePage(),
+    trianglePage.routeName: (BuildContext context) => new trianglePage(),
+    circlePage.routeName: (BuildContext context) => new circlePage(),
   };
 
   @override
@@ -60,14 +61,14 @@ class _homePageState extends State<homePage> {
                   margin: EdgeInsets.symmetric(vertical: 15.0, horizontal: 8.0),
                   child: GestureDetector(
                     child: Image.asset('assets/circle.png', scale: scale),
-//                    onTap: () {Navigator.pushNamed(context, circlePage.routeName);},
+                    onTap: () {Navigator.pushNamed(context, circlePage.routeName);},
                   ),
                 ),
                 Container(
                   margin: EdgeInsets.symmetric(vertical: 15.0, horizontal: 8.0),
                   child: GestureDetector(
                     child: Image.asset('assets/triangle.png', scale: scale),
-//                    onTap: () {Navigator.pushNamed(context, trianglePage.routeName);},
+                    onTap: () {Navigator.pushNamed(context, trianglePage.routeName);},
                   ),
                 ),
               ],

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
+import 'squarePage.dart';
 import 'trianglePage.dart';
-import 'circlePage.dart';
 
-class squarePage extends StatefulWidget {
-  squarePage({Key key, this.title}) : super(key: key);
+class circlePage extends StatefulWidget {
+  circlePage({Key key, this.title}) : super(key: key);
   final String title;
-  static final String routeName = "square";
+  static final String routeName = "circle";
   @override
-  squarePageState createState() => squarePageState();
+  circlePageState createState() => circlePageState();
 }
 
-class squarePageState extends State<squarePage> {
+class circlePageState extends State<circlePage> {
   TextEditingController controller = TextEditingController();
 
   @override
@@ -32,7 +32,7 @@ class squarePageState extends State<squarePage> {
     try {
       double side = double.tryParse(controller.text);
       setState(() {
-        area = (side*side).toStringAsFixed(2);
+        area = (side*side*3.14159).toStringAsFixed(2);
       });
     }
     catch(Exception) {}
@@ -41,14 +41,14 @@ class squarePageState extends State<squarePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Square Area")),
+      appBar: AppBar(title: Text("Circle Area")),
       body: ListView(
         children: <Widget>[
           Container(
             margin: EdgeInsets.only(top: 8.0, bottom: 32.0),
             child: Center(
               child: GestureDetector(
-                child: Image.asset('assets/square.png', scale: .65),
+                child: Image.asset('assets/circle.png', scale: .65),
                   onTap: clear,
               ),
             ),
@@ -58,7 +58,7 @@ class squarePageState extends State<squarePage> {
               Padding(
                   padding: EdgeInsets.only(left: 8.0),
                   child:
-                      Text("Side length:", style: TextStyle(fontSize: 20.0))),
+                      Text("Radius length:", style: TextStyle(fontSize: 20.0))),
               Flexible(
                 child: Container(
                     decoration: BoxDecoration(border: Border.all()),
@@ -84,7 +84,7 @@ class squarePageState extends State<squarePage> {
                 Expanded(
                     child: Column(
                       children: <Widget>[
-                        Text("Area of Square: ", style: TextStyle(fontSize: 20.0)),
+                        Text("Area of Circle: ", style: TextStyle(fontSize: 20.0)),
                         Text(area, style: TextStyle(fontSize: 20.0), textScaleFactor: 2.0, overflow: TextOverflow.fade,),
                       ],
                   ),
@@ -100,8 +100,8 @@ class squarePageState extends State<squarePage> {
               Container(
                 margin: EdgeInsets.symmetric(vertical: 15.0, horizontal: 8.0),
                 child: GestureDetector(
-                  child: Image.asset('assets/circle.png', scale: .6),
-                    onTap: () {Navigator.popAndPushNamed(context, circlePage.routeName);},
+                  child: Image.asset('assets/square.png', scale: .6),
+                    onTap: () {Navigator.popAndPushNamed(context, squarePage.routeName);},
                 ),
               ),
               Container(
